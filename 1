@@ -1,0 +1,115 @@
+1#include <iostream>
+#include <cstdlib>
+#include <time.h>
+using namespace std;
+
+int main()
+{
+ 
+    int ar[5] = { 75546,15486,54698,48944,35444 };
+    int ae[5] = { 866236,66589, 144856,3475165,296644 };
+    int  mein;
+    cout << "vvedit scho vi shochete pobachiti\n"
+        << "sort_by_ICQ_numbers---> click 1\n"
+        << "sort_by_numbers_phone---> click 2\n"
+        << "vivesti_spisok_polzovateley---> click 3\n"
+        << "exit1---> click 4\n";
+    cin >> mein;
+    enum masiv
+    {
+        sort_by_ICQ_numbers = 1,
+        sort_by_numbers_phone,
+        vivesti_spisok_polzovateley,
+        exit1
+    };
+    switch (mein)
+    {
+    case 1:
+    {
+       
+        for (int y = 0; y < 5; y++)
+        {
+
+            cout << ar[y];
+            cout << "  ";
+        }
+        cout << '\n';
+     
+        for (int i = 1, j; i < 5; i++)
+        {
+
+            j = i;
+            while (j > 0 && ar[j - 1] > ar[j])
+            {
+                swap(ar[j], ar[j - 1]);
+                j--;
+
+
+            }
+
+        }
+       
+        for (int y = 0; y < 5; y++)
+        {
+
+            cout << ar[y];
+            cout << "  ";
+        }
+        cout << '\n';
+        break;
+    }
+    case 2:
+    {
+       
+        for (int y = 0; y < 5; y++)
+        {
+
+            cout << ae[y];
+            cout << "  ";
+        }
+        cout << '\n';
+  
+        for (int i = 1, j; i < 5; i++)
+        {
+
+            j = i;
+            while (j > 0 && ar[j - 1] > ar[j])
+            {
+                swap(ar[j], ar[j - 1]);
+                j--;
+
+
+            }
+
+        }
+
+        for (int y = 0; y < 5; y++)
+        {
+
+            cout << ae[y];
+            cout << "  ";
+        }
+        cout << '\n';
+        break;
+    }
+    case 3:
+    {
+        for (int y = 0; y < 5; y++)
+        {
+
+            cout << ae[y];
+            cout << "  ";
+        }
+        cout << '\n';
+        cout << "vasya, ivan, volodya, igor, vacheslav\n";
+        break;
+    }
+    case 4:
+    {
+        cout << "exit\n";
+        break;
+    }
+
+    }
+
+}
